@@ -11,7 +11,6 @@ public class Exercise2 {
      * @return distance
      */
     public static double distance(int x0, int y0, int x1, int y1) {
-        // TODO
-        throw new UnsupportedOperationException("Not yet implemented");
+        return Math.sqrt(Math.pow((x1 - x0), 2)) + Math.pow((y1 - y0), 2);
     }
 }
