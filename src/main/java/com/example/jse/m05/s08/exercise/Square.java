@@ -1,17 +1,17 @@
 package com.example.jse.m05.s08.exercise;
 
 public class Square {
-    // TODO: every square should have its own side length
+    private double side;
 
     public Square(double side) {
-        // TODO: initialize the current side length
+        this.side = side;
     }
 
     public double area() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        return Math.pow(side, 2);
     }
 
     public double perimeter() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        return 4 * side;
     }
 }

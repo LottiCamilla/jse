@@ -1,17 +1,17 @@
 package com.example.jse.m05.s08.exercise;
 
 public class Circle {
-    // TODO: every circle should have its own radius
+    private double radius;
 
     public Circle(double radius) {
-        // TODO: initialize the current circle radius
+        this.radius = radius;
     }
 
     public double area() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        return Math.PI * Math.pow(radius, 2);
     }
 
     public double perimeter() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        return 2 * Math.PI * radius;
     }
 }
