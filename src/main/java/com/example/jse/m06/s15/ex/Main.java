@@ -23,16 +23,27 @@ package com.example.jse.m06.s15.ex;
 public class Main {
     public static void main(String[] args) {
         // TODO: create actors, both warriors and wizards
-        Actor[] actors = { /* ... */ };
+        Actor[] actors = { new Warrior("warrior1", 90), new Wizard("wizard1", 150), new Wizard("wizard2", 350), new Warrior("warrior2", 110), new Wizard("wizard3", 300)};
 
         for (Actor actor : actors) {
             System.out.println(actor);
         }
 
-        System.out.println("Let's fight ...");
+        System.out.println("\nLet's fight ...");
+        Actor winner = actors[0];
         for (Actor actor : actors) {
-            System.out.println("Actor: " + actor);
-            // ...
+        	System.out.println(winner + " \tVS\t " + actor);
+        	if (!winner.fight(actor)) {
+        		winner = actor;
+        	}
         }
+        
+//        for (int i = 1; i < actors.length; i++) {
+//        	System.out.println(winner + " VS " + actors[i]);
+//        	if (!winner.fight(actors[i])) {
+//        		winner = actors[i];
+//        	}
+//        }
+        System.out.println("\nIl vincitore è " + winner);
     }
 }
